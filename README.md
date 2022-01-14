@@ -1,3 +1,3 @@
-# Projekt na SUML
+# Projekt na zajęcia SuML
 
-Jak w tytule. Bede tutaj wrzucal progress nad projektem na sumle
+Projekt dzięki któremu sprawdzimy czy osoba starająca się o kredyt będzie w stanie go spłacać. Wykorzystujemy do tego ML
