@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="modal">
+    <div class="modal_window">
+        <h3>Wynik oceny wypłacalności klienta:</h3>
+        {{ml}}
+        <a href="{{ url_for('home') }}" id="ok-button">Zamknij</a>
+    </div>
+</div>
+
+{% endblock %}

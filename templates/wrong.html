@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="modal">
+    <div class="modal_window">
+        <h3>Wprowadź wszystkie dane w celu wyliczenia wypłacalności</h3>
+
+        <a href="{{ url_for('form') }}" id="ok-button">Wróć</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,819 @@
+/* kolor tła na odcień szarego
+font na bezszeryfowy */
+html {
+    background-color: #ecf0f1;
+    font-family: sans-serif;
+}
+
+/* minimalną szerokość na 1024 pikseli */
+body {
+    min-width: 1024px;
+}
+
+/* kolor tła */
+header, 
+main, 
+footer {
+    background-color: white;
+}
+
+/* marginesy: */
+header,
+main,
+footer,
+nav {
+    margin: 1rem;
+}
+
+
+/* Specyficzne formatowanie dla nagłówka i stopki: */
+header, 
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+}
+
+/* Zmiana tła dla belki nawigacyjnej: */
+nav {
+    background-color: #bdc3c7;
+}
+
+/* Dopasowanie listy do wyświetlenia jako menu poziome: */
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+/* Ustawienie odpowiedniego wyglądu dla odnośników: */
+nav ul li a {
+    display: inline-block;
+    color: #2c3e50;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+/* Ustawienie zachowania po najechaniu na element menu: */
+nav ul li a:hover {
+    background-color: #d35400;
+    color: #ecf0f1;
+}
+
+/* Stworzenie klasy do oznaczenia elementu menu, który jest aktualnie wybrany: */
+nav ul li a.active {
+    background-color: #95a5a6;
+    color: #ecf0f1;
+}
+
+img {
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
+
+/* Ustawienie dopełnienia aby odsunąć zawartość od obramowania: */
+main {
+    padding: 1.5rem;
+}
+
+/* Wycentrowanie tekstu wyświetlanego w stopce strony: */
+footer {
+    text-align: center;
+}
+
+/* Zdefiniowanie nagłówka drugiego poziomu (h2) dla sekcji zawartości (main): */
+main h2 {
+    border-bottom: 1px solid #7f8c8d;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    border-bottom: 1px solid #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+/* Rozciągnięcie tabeli na całą szerokość pola oraz złączenie obramowań komórek: */
+.table-list {
+    border-collapse: collapse;
+    color:#2c3e50;
+    width: 100%;
+}
+
+/* Obramowanie tabeli oraz komórek: */
+.table-list,
+.table-list th,
+.table-list td {
+    border: 1px solid #bdc3c7;
+    text-align: left;
+}
+
+/* Odsunięcie zawartości komórek od obramowania: */
+.table-list th,
+.table-list td {
+    padding: 0.5rem;
+}
+
+/* Ustalenie koloru tła nagłówka i naprzemiennych wierszy: */
+.table-list th,
+.table-list tbody tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+/* Dopasowanie listy do wyświetlenia jej elementów jako poziomych przycisków: */
+.list-actions {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Ułożenie elementów listy w poziomie: */
+.list-actions li {
+    display:inline-block;
+    padding: 5px;
+}
+
+/* Określamy właściwości wspólne dla przycisków: */
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete,
+.list-actions-button-back {
+    display: inline-block;
+    width: 75px;
+    padding: 0.25rem 0.5rem;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete,
+.list-actions-button-back,
+.button-add,
+.form-button-submit,
+.form-button-cancel,
+.form-button-edit {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+/* Ustawiamy odstępy między przyciskami: */
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete,
+.list-actions-button-back {
+    margin-right: 1rem;
+}
+
+/* Ustawienie właściwości specyficznych dla konkretnych przycisków: */
+.list-actions-button-details {
+    background-color: #2980b9;    
+}
+.list-actions-button-details:hover {
+    background-color: #3498db;
+}
+.list-actions-button-edit,
+.form-button-edit {
+    background-color: #f39c12;
+}
+
+.list-actions-button-edit:hover,
+.form-button-edit {
+    background-color: #f1c40f;
+}
+
+.form-button-cancel,
+.list-actions-button-delete,
+.list-actions-button-back {
+    background-color: #c0392b;
+}
+
+.form-button-cancel:hover,
+.list-actions-button-delete:hover,
+.list-actions-button-back:hover {
+    background-color: #e74c3c;
+}
+
+.form-button-submit,
+.form-button-cancel,
+.form-button-edit {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+/* Dodaj specyficzną deklaracje dla przycisku: */
+.button-add,
+.form-button-submit,
+.form-button-cancel,
+.form-button-edit {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.button-add,
+.form-button-submit {
+    background-color: #27ae60;
+}
+.button-add:hover,
+.form-button-submit:hover {
+    background-color: #2ecc71;
+}
+
+/* Ujednolicenie wyglądu elementów formularza: */
+button, 
+input, 
+select, 
+textarea { 
+    font-family: sans-serif; 
+    font-size: 100%; 
+    box-sizing: border-box; 
+    padding: 0; margin: 0; 
+} 
+
+textarea { 
+    overflow: auto; 
+}
+
+/* Zdefiniowanie właściwości formularza: */
+.form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px 1px;
+    gap: 1rem;
+}
+.form select[readonly] {
+    background: rgb(247, 243, 243);
+    pointer-events: none;
+    touch-action: none;
+}
+/* Zdefiniowanie właściwości wspólnych dla pól formularza: */
+.form select, 
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="email"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: fit-content;
+}
+.form input[name="points"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+.form input[name="assesmentStartDate"],
+.form input[name="assesmentEndDate"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+.form input[type="number"],
+.form input[type="date"] {
+    text-align: center;
+}
+.form select[name="idEmployee"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form select[name="idForm"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form textarea[name="title"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+    resize: vertical;
+}
+
+.form textarea[name="remarks"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+    resize: vertical;
+}
+.form select[name="country"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form select[name="region"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form select[name="legalForm"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form textarea[name="address"],
+.form textarea[name="name"]
+ {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+    resize: vertical;
+}
+
+.form input[name="cofinancingRate"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.form input[name="totalScore"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.form input[name="projectBudget"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.form input[name="startDate"] {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.form select {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    width: fit-content;
+}
+
+.form textarea {
+    border: 1px solid #7f8c8d;
+    color:#2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: left;
+    resize: vertical;
+}
+
+/* Zdefiniowanie wyglądu etykiet: */
+.form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5em;
+}
+
+/* zdefiniuj odpowiedni styl dla klasy: */
+.symbol-required {
+    color: #c0392b;
+}
+
+/* Zdefiniuj odstęp między formularzem a przyciskami: */
+.form-buttons{
+    margin-top: 2rem;
+    grid-column: 1 / span 2;
+
+}
+
+/* Zdefiniuj klasę, która będzie odpowiedzialna za właściwe formatowanie błędnie wypełnionych pól formularza: */
+.form input.error-input,
+.form textarea.error-input,
+.form select.error-input {
+    border: 3px solid #e74c3c
+}
+
+.error-firstName,
+.error-lastName,
+.error-email,
+.error-position,
+.error-password,
+.error-role,
+.error-callName,
+.error-callStartDate,
+.error-callEndDate,
+.error-callBudget,
+.error-title,
+.error-employee,
+.error-date,
+.error-description,
+.error-score,
+.error-name,
+.error-registrationNumber,
+.error-country,
+.error-region,
+.error-legalForm,
+.error-address,
+.error-contactPerson,
+.error-idApplicant,
+.error-partner,
+.error-idCall,
+.error-projectTitle,
+.error-thematicObjective,
+.error-projectBudget,
+.error-cofinancingRate,
+.error-description,
+.error-startDate {
+    display: block;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+    color: #e74c3c;
+}
+
+.error-text {
+    display: block;
+    font-size: 0.85em;
+    line-height: 2.25rem;
+    margin-top: 0.5em;
+    color: #e74c3c;
+    grid-column: 1 / span 3;
+}
+
+#error-sum {
+    font-weight: bold;
+    font-size:15px;
+}
+
+.modal,
+#confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_window {
+    position: relative;
+    background-color:white;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: fit-content;
+    height: 150px;
+}
+
+#modal:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+#confirmation:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#ok-button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #27ae60;
+    position:absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+#ok-button:hover {
+    background-color: #2ecc71;
+}
+
+#ok-button-delete {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #27ae60;
+    position: absolute;
+    top: 78%;
+    left: 30%;
+    transform: translate(-50%, -50%)
+}
+#ok-button-delete:hover {
+    background-color: #2ecc71;
+}
+
+#no-button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #c0392b;
+    position: absolute;
+    top: 78%;
+    left: 70%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+#no-button:hover {
+    background-color: #e74c3c;
+}
+
+.login {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+header h5 {
+    margin-bottom: 2px;
+}
+
+.newApplicant {
+    font-size: 14px;
+    margin-right: 1rem;
+}
+
+#logoutButton {
+    border: none;
+    text-align: center;
+    margin-right: 1rem;
+    display:inline-block;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#logoutButton:hover {
+    background-color: red
+}
+
+#loginErrors {
+    margin-top: 2px;
+    margin-right: 8px;
+    font-size: 14px;
+    color: red;
+}
+#loginMessage {
+    margin-top: 2px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+
+#loginEmail,
+#loginPassword {
+    padding: 6px;
+    margin-top: 2px;
+    margin-right: 8px;
+    font-size: 14px;
+    border:none;
+    width:200px;
+    border-radius: 5px;
+}
+
+#loginButton {
+    display:inline-block;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+  
+#loginButton:hover {
+    background-color: green;
+}
+
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.language {
+    display: inline-grid;
+    grid-template-columns: 30px 30px;
+    height: 30px;
+    grid-gap: 10px;
+    padding: 10px;
+
+}
+.lang-active {
+    display: inline-block;
+    padding: 6px;
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.lang-nonactive {
+    display: inline-block;
+    padding: 6px;
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.langEn {
+    display: inline-block;
+    padding: 1em;
+    margin-top: 10px;
+    background: url('../img/en.png');
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.langPl {
+    display: inline-block;
+    padding: 1em;
+    margin-top: 10px;
+    background: url('../img/pl.png');
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media all and (max-width: 720px) {
+    body {
+        min-width: 360px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header img {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+
+    .less-significant {
+        display: none;
+    }
+
+    /* Zdefiniowanie właściwości formularza: */
+    .form {
+        display: inline;
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+    .form textarea {
+        max-width: 100%;
+    }
+
+    .form-buttons {
+        grid-column: 1 / 1;
+    }
+    .login .login-container {
+        align-self:center;
+    }
+}
+
+@media all and (max-width: 400px) {
+    body {
+        min-width: 360px;
+    }
+    
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin:0%;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
+
+    .less-significant {
+        display: none;
+    }
+
+    /* Zdefiniowanie właściwości formularza: */
+    .form {
+        display: inline;
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+    .form textarea {
+        max-width: 100%;
+    }
+
+    .form-buttons {
+        grid-column: 1 / 1;
+    }
+    .login .login-container {
+        align-self:center;
+    }
+}

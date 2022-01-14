@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2>
+        Wprowadź dane klienta
+</h2>
+
+<form class="form" action="http://localhost:5000/form" method=post>
+
+        <label>Lata zatrudnienia klineta<span class="symbol-required">*</span></label>
+        {{ form.employment }}
+        <span></span>
+        <label>Posiadanie telefonu przez klienta<span class="symbol-required">*</span></label>
+        {{ form.phone_possesing }}
+        <span></span>
+        <label>Posiadane wykształcenie klienta<span class="symbol-required">*</span></label>
+        {{ form.academic }}
+        <span></span>
+        <label>Liczba dzieci klienta na utrzymaniu<span class="symbol-required">*</span></label>
+        {{ form.childrens }}
+        <span></span>
+        <label>Liczba członków rodziny klienta<span class="symbol-required">*</span></label>
+        {{ form.family }}
+        <span></span>
+        <label>Roczny dochód klienta<span class="symbol-required">*</span></label>
+        {{ form.income }}
+        <span></span>
+        <label>Wiek klienta<span class="symbol-required">*</span></label>
+        {{ form.age }}
+        <span></span>
+        <label>Posiadanie nieruchomości przez klienta<span class="symbol-required">*</span></label>
+        {{ form.estate }}
+        <span></span>
+        <div class="form-buttons">
+
+                {{form.submit(class_="form-button-submit")}}
+
+                <a href="{{ url_for('home') }}" class="form-button-cancel">Anuluj</a>
+
+        </div>
+</form>
+
+{% endblock %}
